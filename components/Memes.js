@@ -17,6 +17,8 @@ const Memes = ({memes}) => {
                 layout="fill"
                 objectFit='contain'
                 alt={id}
+                placeholder='blur'
+                blurDataURL={url}
             />
         </div>
       })}

@@ -16,6 +16,8 @@ const Intro = ({pic,title,heading,paragraph,isLeft}) => {
           layout="fill"
           alt="Anime"
           objectFit="cover"
+          placeholder='blur'
+          blurDataURL={pic.url}
           className=" group-hover:scale-150 transition-all duration-200 "
         />
         </div>

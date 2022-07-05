@@ -16,6 +16,8 @@ const CrushIntro = ({loading,pic,setLoading,isLeft}) => {
           layout="fill"
           alt="Anime"
           objectFit="cover"
+          placeholder='blur'
+          blurDataURL={pic?.url}
           onLoadingComplete={()=>setLoading(true)}
           className="rounded-xl group-hover:scale-150 transition-all duration-200 "
         />
