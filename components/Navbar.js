@@ -10,7 +10,6 @@ const Navbar = () => {
     { name: "Jokes", link: "/joke", id: 2 ,icon:"🤣"},
     { name: "Memes", link: "/meme", id: 3 ,icon:"🤪"},
     { name: "Anime's Quotes", link: "/quotes", id: 4,icon:"✅" },
-    { name: "Weather", link: "/weather", id: 5,icon:"🌡️" },
   ];
   let [open, setOpen] = useState(false);
   return (
