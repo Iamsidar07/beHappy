@@ -43,7 +43,7 @@ const Quotes = ({ kill, quotes }) => {
   }, []);
 
   return (
-    <div className=" py-16 md:py-24 max-w-6xl mx-auto">
+    <div className="mt-6 py-16 md:py-24 max-w-6xl mx-auto">
       <Search
         funCall={getQuotes}
         keywords={keywords}
@@ -53,7 +53,7 @@ const Quotes = ({ kill, quotes }) => {
         loading={loading}
         pic={kill}
         setLoading={setLoading}
-        title={"Animes Quotes🦆"}
+        title={"Animes Quotes"}
         heading="Get quotes❤️ of your favourite♨️ Animes Character's Quote Like"
         paragraph={"Ergo Proxy,Haruhi Suzumiya,Basara Tōjō etc."}
         isLeft={true}

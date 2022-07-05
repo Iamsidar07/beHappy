@@ -1,12 +1,17 @@
 import React from 'react'
 import Image from 'next/image'
 const Memes = ({memes}) => {
-  console.log(memes)
+
+  let topMemes=[];
+  for (let index = 0; index < 30; index++) {
+    const element = memes[index];
+    topMemes.push(element) 
+  }
+
   return (
     <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4'>
-      {memes?.map(({url,id})=>{
-        console.log(url)
-        return <div key={id} className="bg-black/90 rounded-md relative  m-1 md:m-3  h-72 md:hover:scale-105 duration-100 ease-in cursor-pointer bg-blend-darken ">
+      {topMemes?.map(({url,id,name})=>{
+        return <div key={id} className={url==undefined?"hidden bg-slate-200 rounded-md relative  m-1 md:m-3  h-72 md:hover:scale-105 duration-100 ease-in cursor-pointer bg-blend-darken ":"bg-slate-200 rounded-md relative  m-1 md:m-3  h-72 md:hover:scale-105 duration-100 ease-in cursor-pointer bg-blend-darken "}>
             <Image 
                 src={url}
                 layout="fill"

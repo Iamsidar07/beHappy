@@ -31,7 +31,7 @@ const CrushTalk = () => {
     <div>
       
 
-      <div className=" italic block mx-auto p-6 rounded-lg shadow-lg bg-white w-full">
+      <div className="h-60 md:h-full flex items-center justify-start italic md:block mx-auto p-2 rounded-lg shadow-lg bg-white w-full">
       
         <form onSubmit={talkToLove}>
           <div className="form-group mb-6">

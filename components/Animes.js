@@ -1,24 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 const Animes = ({ animes }) => {
+  const [load,setLoad]=useState(true);
   return (
     <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  ">
       {animes.images?.map(({ url, width, height, image_id, tags }) => {
         return (
           <div
             key={image_id}
-            className="mx-auto bg-slate-50  my-2 md:m-3   group   rounded overflow-hidden shadow-md hover:shadow-lg"
+            className="mx-auto h-fit  md:w-auto w-full bg-slate-50  my-2 md:m-3  group   rounded overflow-hidden shadow-md hover:shadow-lg"
           >
             <Image
-              className="w-full cursor-pointer group-hover:scale-110 transition-all ease-in duration-200"
+              className={url==undefined?" hidden w-full md:cursor-pointer md:group-hover:scale-125 transition-all ease-in duration-200":" w-full md:cursor-pointer md:group-hover:scale-125 transition-all ease-in duration-200"}
               src={url}
               layout="responsive"
               width={width}
               height={height}
               alt={image_id}
+              onLoadingComplete={()=>setLoad(false)}
             />
             <div className="cursor-pointer px-6 py-4">
-              <p className="text-gray-700  group-hover:font-bold text-base">
+              <p className="text-gray-700  md:group-hover:font-bold text-base">
                 {tags[1]?.description}
               </p>
             </div>
@@ -27,7 +29,7 @@ const Animes = ({ animes }) => {
                 return (
                   <span
                     key={tag_id}
-                    className="inline-block  group-hover:font-bold bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+                    className="inline-block  md:group-hover:font-bold bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
                   >
                     
                     <p>@{name}</p>

@@ -24,42 +24,30 @@ const Meme = ({ meme }) => {
     e.preventDefault();
     const getData = async function () {
       const res = await fetch(
-        `https://api.humorapi.com/memes/search?api-key=${apiKey}&keywords=${keywords}&media-type=image&media-type=video&number=10`
+        "https://api.imgflip.com/get_memes"
       );
       const data = await res.json();
-      setMemes(data.memes);
+      setMemes(data.data.memes);
     };
     getData();
   };
 
-
-
-setTimeout(() => {
-    const getData = async function () {
-      const res = await fetch(
-        `https://api.humorapi.com/memes/search?api-key=${apiKey}&keywords=${keywords}&media-type=image&media-type=video&number=10`
-      );
-      const data = await res.json();
-      setMemes(data.memes);
-    };
-    getData();
-  }, 100);
 
 useEffect(()=>{
   const getData = async function () {
     const res = await fetch(
-      `https://api.humorapi.com/memes/search?api-key=${apiKey}&keywords=${keywords}&media-type=image&media-type=video&number=10`
+     "https://api.imgflip.com/get_memes"
     );
     const data = await res.json();
-    setMemes(data.memes);
+    setMemes(data.data.memes);
   };
   getData();
-},[keywords,apiKey])
+},[])
 
-  
+  console.log(memes)
 
   return (
-    <div className="py-16 md:py-24  max-w-6xl mx-auto">
+    <div className="mt-6 py-16 md:py-24  max-w-6xl mx-auto">
       <Search
         funCall={getMemes}
         keywords={keywords}
@@ -70,7 +58,7 @@ useEffect(()=>{
         loading={loading}
         pic={meme}
         setLoading={setLoading}
-        title={"Favourite Memes "}
+        title={"Favourite Memes"}
         heading="Get Your Favourite Memes🤣 from here from various categories Like"
         paragraph={"Chuck Noris,Sexist,Christmas,etc."}
         isLeft={true}

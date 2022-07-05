@@ -1,6 +1,7 @@
 import React from "react";
 
 const Search = ({ funCall, keywords, setKeywords }) => {
+ 
   return (
     <div>
       <form className="w-[95%] md:w-[40%]  mx-auto my-5 mb-10" onSubmit={funCall}>

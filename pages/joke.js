@@ -43,7 +43,7 @@ const Jokes = ({ happy }) => {
   }, [keywords]);
 
   return (
-    <div className=" py-16 md:py-24  max-w-6xl mx-auto">
+    <div className="mt-6 py-16 md:py-24  max-w-6xl mx-auto">
       <Search
         funCall={getJokes}
         keywords={keywords}

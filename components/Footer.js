@@ -5,10 +5,10 @@ const Footer = () => {
     const date=new Date();
     const year=date.getFullYear();
   return (
-    <footer className='w-full flex items-center justify-center h-20 shadow-2xl'>
+    <footer className='bg-white  w-full px-2 md:p-5 flex items-center justify-center h-20 shadow-2xl'>
       <p className='text-sm font-bold '>All rights reserved ©{year}|Made by
       <Link href={"https://twitter.com/iamsidar07"}>
-       <span className='cursor-pointer text-red-500'>@Manoj kumar</span>
+       <span className='cursor-pointer text-red-500'> @Manoj kumar</span>
       </Link>
        ♨️</p>
     </footer>
