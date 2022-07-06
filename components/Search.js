@@ -1,4 +1,6 @@
 import React from "react";
+import { TextField } from "@mui/material";
+import Fab from "@mui/material/Fab";
 
 const Search = ({ funCall, keywords, setKeywords }) => {
  
@@ -28,6 +30,8 @@ const Search = ({ funCall, keywords, setKeywords }) => {
               />
             </svg>
           </div>
+          <div className="flex items-center justify-between">
+
           <input
             type="search"
             id="default-search"
@@ -37,6 +41,10 @@ const Search = ({ funCall, keywords, setKeywords }) => {
             value={keywords}
             onChange={(e) => setKeywords(e.target.value)}
           />
+
+          </div>
+
+
           <button
             onClick={funCall}
             type="submit"
