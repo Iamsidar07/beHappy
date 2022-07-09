@@ -23,31 +23,26 @@ const Meme = ({ meme }) => {
   const getMemes = (e) => {
     e.preventDefault();
     const getData = async function () {
-      const res = await fetch(
-        "https://api.imgflip.com/get_memes"
-      );
+      const res = await fetch("https://api.imgflip.com/get_memes");
       const data = await res.json();
       setMemes(data.data.memes);
     };
     getData();
   };
 
+  useEffect(() => {
+    const getData = async function () {
+      const res = await fetch("https://api.imgflip.com/get_memes");
+      const data = await res.json();
+      setMemes(data.data.memes);
+    };
+    getData();
+  }, []);
 
-useEffect(()=>{
-  const getData = async function () {
-    const res = await fetch(
-     "https://api.imgflip.com/get_memes"
-    );
-    const data = await res.json();
-    setMemes(data.data.memes);
-  };
-  getData();
-},[])
-
-  console.log(memes)
+  console.log(memes);
 
   return (
-    <div className="mt-6 py-16 md:py-24  max-w-6xl mx-auto">
+    <div className=" py-16 md:py-24  max-w-6xl mx-auto">
       <Search
         funCall={getMemes}
         keywords={keywords}
@@ -62,6 +57,9 @@ useEffect(()=>{
         heading="Get Your Favourite Memes🤣 from here from various categories Like"
         paragraph={"Chuck Noris,Sexist,Christmas,etc."}
         isLeft={true}
+        url="/meme"
+        category={"Memes"}
+        isBtn={false}
       />
 
       {memes?.length != 0 && (

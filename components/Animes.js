@@ -8,7 +8,7 @@ const Animes = ({ animes }) => {
         return (
           <div
             key={image_id}
-            className="mx-auto h-fit  md:w-auto w-full bg-slate-50  my-2 md:m-3  group   rounded overflow-hidden shadow-md hover:shadow-lg"
+            className="mx-auto h-fit   md:w-auto w-full bg-[#1e293b] text-white  my-2 md:m-3  group   rounded overflow-hidden shadow-md hover:shadow-lg"
           >
             <Image
               className={url==undefined?" hidden w-full md:cursor-pointer md:group-hover:scale-125 transition-all ease-in duration-200":" w-full md:cursor-pointer md:group-hover:scale-125 transition-all ease-in duration-200"}
@@ -31,7 +31,7 @@ const Animes = ({ animes }) => {
                 return (
                   <span
                     key={tag_id}
-                    className="inline-block  md:group-hover:font-bold bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+                    className="inline-block  md:group-hover:font-bold  rounded-full px-3 py-1 text-sm font-semibold text-gray-400 mr-2 mb-2"
                   >
                     
                     <p>@{name}</p>

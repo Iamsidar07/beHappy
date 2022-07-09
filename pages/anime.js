@@ -45,7 +45,7 @@ const Anime = ({ smile }) => {
 
 
   return (
-    <div className=" py-16 md:py-24 mt-6  max-w-6xl mx-auto">
+    <div className=" py-16 md:py-24   max-w-6xl mx-auto">
       <Search
         funCall={getAnimes}
         keywords={keywords}
@@ -60,6 +60,9 @@ const Anime = ({ smile }) => {
         heading="Get Your Favourite 🥰Animes from various categories Like"
         paragraph={"smile,selfie,milf,assetc."}
         isLeft={false}
+        url="/anime"
+        category={"Anime's"}
+        isBtn={false}
       />
      
       <Animes animes={animes}/>

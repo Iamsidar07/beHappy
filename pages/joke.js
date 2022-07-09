@@ -43,7 +43,7 @@ const Jokes = ({ happy }) => {
   }, [keywords]);
 
   return (
-    <div className="mt-6 py-16 md:py-24  max-w-6xl mx-auto">
+    <div className=" py-16 md:py-24  max-w-6xl mx-auto">
       <Search
         funCall={getJokes}
         keywords={keywords}
@@ -58,6 +58,9 @@ const Jokes = ({ happy }) => {
         heading="Get Your Favourite Jokes🤣 from various categories Like"
         paragraph={"Sex,Political,nsfw,etc."}
         isLeft={false}
+        url="/joke"
+        category={"Jokes"}
+        isBtn={false}
       />
 
       {jokes?.length != 0 && (

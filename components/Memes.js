@@ -11,7 +11,7 @@ const Memes = ({memes}) => {
   return (
     <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4'>
       {topMemes?.map(({url,id,name})=>{
-        return <div key={id} className={url==undefined?"hidden bg-slate-200 rounded-md relative  m-1 md:m-3  h-72 md:hover:scale-105 duration-100 ease-in cursor-pointer bg-blend-darken ":"bg-slate-200 rounded-md relative  m-1 md:m-3  h-72 md:hover:scale-105 duration-100 ease-in cursor-pointer bg-blend-darken "}>
+        return <div key={id} className={url==undefined?"hidden bg-[#1e293b] rounded relative  m-1 md:m-3  h-72 md:hover:scale-110 duration-100 ease-in cursor-pointer bg-blend-darken ":"bg-slate-200 rounded-md relative  m-1 md:m-3  h-72 md:hover:scale-105 duration-100 ease-in cursor-pointer bg-blend-darken "}>
             <Image 
                 src={url}
                 layout="fill"
