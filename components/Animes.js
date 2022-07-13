@@ -3,15 +3,15 @@ import Image from "next/image";
 const Animes = ({ animes }) => {
   const [load,setLoad]=useState(true);
   return (
-    <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  ">
+    <div className=" w-full grid grid-cols-1 md:grid-cols-3  ">
       {animes.images?.map(({ url, width, height, image_id, tags }) => {
         return (
           <div
             key={image_id}
-            className="mx-auto h-fit   md:w-auto w-full bg-[#1e293b] text-white  my-2 md:m-3  group   rounded overflow-hidden shadow-md hover:shadow-lg"
+            className=" mx-auto h-fit  md:w-auto w-full bg-[#1e293b] text-white  my-2 md:m-3  group   rounded overflow-hidden shadow-md hover:shadow-lg"
           >
             <Image
-              className={url==undefined?" hidden w-full md:cursor-pointer md:group-hover:scale-125 transition-all ease-in duration-200":" w-full md:cursor-pointer md:group-hover:scale-125 transition-all ease-in duration-200"}
+              className={typeof url==undefined?"  hidden w-full md:cursor-pointer md:group-hover:scale-125 transition-all ease-in duration-200":"  w-full md:cursor-pointer md:group-hover:scale-125 transition-all ease-in duration-200"}
               src={url}
               layout="responsive"
               width={width}

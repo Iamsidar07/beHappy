@@ -43,7 +43,7 @@ const Quotes = ({ kill, quotes }) => {
   }, []);
 
   return (
-    <div className="bg-[#0f172a] max-w-6xl  py-16 md:py-24  mx-auto">
+    <div className="bg-[#0f172a] max-w-md md:max-w-6xl  md:py-10  mx-auto">
       <Search
         funCall={getQuotes}
         keywords={keywords}

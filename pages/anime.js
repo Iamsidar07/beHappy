@@ -45,7 +45,7 @@ const Anime = ({ smile }) => {
 
 
   return (
-    <div className=" py-16 md:py-24   max-w-6xl mx-auto">
+    <div className=" max-w-sm md:py-10 md:max-w-6xl mx-auto">
       <Search
         funCall={getAnimes}
         keywords={keywords}

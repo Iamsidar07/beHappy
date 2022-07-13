@@ -35,17 +35,17 @@ const Navbar = () => {
         </div>
 
         <ul
-          className={`md:flex bg-white md:bg-transparent md:text-white md:items-center md:pb-0 pb-12 absolute md:static md:z-auto z-[100] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${
-            open ? "top-16 " : "top-[-490px]"
+          className={`flex flex-col items-center md:flex-row bg-[#0f172a] md:bg-transparent text-white md:items-center md:pb-0 pb-12 absolute md:static md:z-auto z-[100] left-0 w-full md:w-auto md:pl-0 justify-center text-center transition-all duration-500 ease-in ${
+            open ? "top-20 " : "top-[-490px]"
           }`}
         >
           {Links.map((link) => (
             <li
               key={link.id}
-              className="md:ml-1  group whitespace-nowrap text-sm md:my-0 text-left p-3 rounded-md md:hover:bg-[#1e293b]"
+              className="md:ml-1 group whitespace-nowrap text-sm md:my-0 text-left p-3 rounded-md md:hover:bg-[#1e293b]"
             >
               <Link href={link.link}>
-                <a className="text-gray-800 md:text-white  hover:text-gray-400 duration-500 ">
+                <a className="text-white md:text-white  hover:text-gray-400 duration-500 ">
                   {link.name}
                 </a>
               </Link>
