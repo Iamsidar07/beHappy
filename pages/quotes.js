@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Quote from "../components/Quote";
 import Search from "../components/Search";
 import Intro from "../components/Intro";
+import { Fade } from "react-reveal";
 
 export async function getServerSideProps() {
   const kill_res = await fetch("https://waifu.pics/api/sfw/kill");
@@ -44,6 +45,7 @@ const Quotes = ({ kill, quotes }) => {
 
   return (
     <div className="bg-[#0f172a] max-w-md md:max-w-6xl  md:py-10  mx-auto">
+      <Fade bottom>
       <Search
         funCall={getQuotes}
         keywords={keywords}
@@ -60,6 +62,7 @@ const Quotes = ({ kill, quotes }) => {
         category={"Quotes"}
         isBtn={false}
       />
+      </Fade>
       {quotesData.length != 0 && <Quote quotes={quotesData} />}
       <Quote quotes={quotes} />
     </div>

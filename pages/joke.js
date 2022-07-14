@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Joke from "../components/Joke";
 import Search from "../components/Search";
 import Intro from "../components/Intro";
+import { Fade } from "react-reveal";
 
 export async function getServerSideProps() {
   const happy_res = await fetch("https://waifu.pics/api/sfw/happy");
@@ -44,6 +45,7 @@ const Jokes = ({ happy }) => {
 
   return (
     <div className=" max-w-sm md:py-10   md:max-w-6xl mx-auto">
+      <Fade bottom>
       <Search
         funCall={getJokes}
         keywords={keywords}
@@ -61,7 +63,7 @@ const Jokes = ({ happy }) => {
         category={"Jokes"}
         isBtn={false}
       />
-
+      </Fade>
       {jokes?.length != 0 && (
         <>
           <h1 className="md:text-3xl font-bold text-gray-400 p-3">

@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import { useState } from "react";
+import { Fade } from "react-reveal";
 import CrushIntro from "../components/CrushIntro";
 import Intro from "../components/Intro";
 import bg from "../public/1.gif";
@@ -51,8 +52,9 @@ const styling = {
         <link rel="icon" href="/logo.png" />
       </Head>
       <div >
-
+         <Fade bottom>
         <CrushIntro loading={loading} pic={kiss} setLoading={setLoading} />
+         
         
         <Intro
           loading={loading}
@@ -98,6 +100,7 @@ const styling = {
           category={"Memes"}
           isBtn={true}
         />
+        </Fade>
       </div>
 
          

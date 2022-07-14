@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import Image from "next/image";
+import { Fade } from "react-reveal";
 const Animes = ({ animes }) => {
   const [load,setLoad]=useState(true);
   return (
     <div className=" w-full grid grid-cols-1 md:grid-cols-3  ">
       {animes.images?.map(({ url, width, height, image_id, tags }) => {
         return (
+          <Fade bottom >
           <div
             key={image_id}
             className=" mx-auto h-fit  md:w-auto w-full bg-[#1e293b] text-white  my-2 md:m-3  group   rounded overflow-hidden shadow-md hover:shadow-lg"
@@ -22,7 +24,7 @@ const Animes = ({ animes }) => {
               onLoadingComplete={()=>setLoad(false)}
             />
             <div className="cursor-pointer px-6 py-4">
-              <p className="text-gray-700  md:group-hover:font-bold text-base">
+              <p className="text-gray-400 md:group-hover:font-bold text-base">
                 {tags[1]?.description}
               </p>
             </div>
@@ -41,6 +43,7 @@ const Animes = ({ animes }) => {
               })}
             </div>
           </div>
+          </Fade>
         );
       })}
     </div>

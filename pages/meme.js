@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Memes from "../components/Memes";
 import Search from "../components/Search";
 import Intro from "../components/Intro";
+import { Fade } from "react-reveal";
 
 export async function getServerSideProps() {
   const meme_res = await fetch("https://api.catboys.com/img");
@@ -43,24 +44,27 @@ const Meme = ({ meme }) => {
 
   return (
     <div className="max-w-sm md:py-10  md:max-w-6xl mx-auto">
-      <Search
-        funCall={getMemes}
-        keywords={keywords}
-        setKeywords={setKeywords}
-      />
+      <Fade bottom>
+        <Search
+          funCall={getMemes}
+          keywords={keywords}
+          setKeywords={setKeywords}
+        />
 
-      <Intro
-        loading={loading}
-        pic={meme}
-        setLoading={setLoading}
-        title={"Favourite Memes"}
-        paragraph={"Get Your Favourite Memes from here from various categories Like Chuck Noris,Sexist,Christmas,etc."}
-        isLeft={true}
-        url="/meme"
-        category={"Memes"}
-        isBtn={false}
-      />
-
+        <Intro
+          loading={loading}
+          pic={meme}
+          setLoading={setLoading}
+          title={"Favourite Memes"}
+          paragraph={
+            "Get Your Favourite Memes from here from various categories Like Chuck Noris,Sexist,Christmas,etc."
+          }
+          isLeft={true}
+          url="/meme"
+          category={"Memes"}
+          isBtn={false}
+        />
+      </Fade>
       {memes?.length != 0 && (
         <>
           <h1 className="md:text-3xl font-bold text-gray-400 p-3">

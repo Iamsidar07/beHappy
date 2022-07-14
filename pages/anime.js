@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Search from "../components/Search";
 import Intro from "../components/Intro";
 import Animes from "../components/Animes";
+import { Fade } from "react-reveal";
 
 export async function getServerSideProps() {
   const smile_res = await fetch("https://waifu.pics/api/sfw/smile");
@@ -46,6 +47,7 @@ const Anime = ({ smile }) => {
 
   return (
     <div className=" max-w-sm md:py-10 md:max-w-6xl mx-auto">
+    <Fade bottom>
       <Search
         funCall={getAnimes}
         keywords={keywords}
@@ -63,6 +65,7 @@ const Anime = ({ smile }) => {
         category={"Anime's"}
         isBtn={false}
       />
+      </Fade>
      
       <Animes animes={animes}/>
     </div>
