@@ -20,7 +20,7 @@ const Intro = ({
     >
       <div className=" text-white  flex flex-col items-center justify-start  md:w-[55%]   group  space-y-2 p-5">
         <div className=" space-y-3 ">
-          <h1 className="text-xl text-transparent  bg-clip-text bg-gradient-to-r from-purple-700 to-green-600  md:text-6xl font-bold  transition-colors duration-100 ease-in">
+          <h1 className="text-3xl text-transparent  bg-clip-text bg-gradient-to-r from-purple-700 to-green-600  md:text-6xl font-bold  transition-colors duration-100 ease-in">
             {title}
           </h1>
           <p className="lowercase text-base md:text-xl">
