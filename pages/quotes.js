@@ -54,8 +54,7 @@ const Quotes = ({ kill, quotes }) => {
         pic={kill}
         setLoading={setLoading}
         title={"Animes Quotes"}
-        heading="Get quotes❤️ of your favourite♨️ Animes Character's Quote Like"
-        paragraph={"Ergo Proxy,Haruhi Suzumiya,Basara Tōjō etc."}
+        paragraph={"get quotes of your favourite Animes Character's Quote Like Ergo Proxy,Haruhi Suzumiya,Basara Tōjō etc."}
         isLeft={true}
         url="/quotes"
         category={"Quotes"}

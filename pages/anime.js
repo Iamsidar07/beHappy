@@ -57,8 +57,7 @@ const Anime = ({ smile }) => {
         pic={smile}
         setLoading={setLoading}
         title={"Anime Collections"}
-        heading="Get Your Favourite 🥰Animes from various categories Like"
-        paragraph={"smile,selfie,milf,assetc."}
+        paragraph={"Get Your Favourite Animes from various categories Like smile,selfie,milf,assetc."}
         isLeft={false}
         url="/anime"
         category={"Anime's"}

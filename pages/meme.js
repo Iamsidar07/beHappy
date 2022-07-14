@@ -54,8 +54,7 @@ const Meme = ({ meme }) => {
         pic={meme}
         setLoading={setLoading}
         title={"Favourite Memes"}
-        heading="Get Your Favourite Memes🤣 from here from various categories Like"
-        paragraph={"Chuck Noris,Sexist,Christmas,etc."}
+        paragraph={"Get Your Favourite Memes from here from various categories Like Chuck Noris,Sexist,Christmas,etc."}
         isLeft={true}
         url="/meme"
         category={"Memes"}

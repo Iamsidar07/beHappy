@@ -55,8 +55,7 @@ const Jokes = ({ happy }) => {
         pic={happy}
         setLoading={setLoading}
         title={"Funny Jokes"}
-        heading="Get Your Favourite Jokes🤣 from various categories Like"
-        paragraph={"Sex,Political,nsfw,etc."}
+        paragraph={"Get Your Favourite Jokes from various categories Like Sex,Political,nsfw,etc."}
         isLeft={false}
         url="/joke"
         category={"Jokes"}
